@@ -77,7 +77,7 @@ public class LoginVIEW extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(65, 65, 65)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
@@ -89,7 +89,7 @@ public class LoginVIEW extends javax.swing.JFrame {
                 .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEntrar)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,8 +161,8 @@ public class LoginVIEW extends javax.swing.JFrame {
             ResultSet rsUsuarioDAO = usuarioDAO.autenticar(usuarioDTO);
             
             if(rsUsuarioDAO.next()) {
-                PrincipalVIEW principalVIEW = new PrincipalVIEW();
-                principalVIEW.setVisible(true);
+                FuncionarioVIEW listaVIEW = new FuncionarioVIEW();
+                listaVIEW.setVisible(true);
                 
                 dispose();
             } else {
